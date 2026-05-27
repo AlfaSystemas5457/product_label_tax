@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_label_layout_form_inherit" model="ir.ui.view">
+        <field name="name">product.label.layout.form.inherit</field>
+        <field name="model">product.label.layout</field>
+        <field name="inherit_id" ref="product.product_label_layout_form"/>
+        <field name="arch" type="xml">
+            <field name="print_format" position="after">
+                <field name="price_with_tax"
+                       groups="account.group_account_manager"
+                       help="Si está activado, el precio mostrado en la etiqueta incluirá los impuestos."/>
+            </field>
+        </field>
+    </record>
+</odoo>

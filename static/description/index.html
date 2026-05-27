@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <title>Etiquetas de producto con impuesto</title>
+</head>
+<body>
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <h2 class="oe_slogan">Etiquetas de producto con impuesto</h2>
+            <p class="oe_mt32">
+                Este módulo agrega la opción de mostrar el <strong>precio con impuesto incluido</strong>
+                en las etiquetas de producto, sin necesidad de modificar la configuración contable
+                de los impuestos (<code>price_include</code>).
+            </p>
+        </div>
+    </section>
+
+    <section class="oe_container oe_dark">
+        <div class="oe_row oe_spaced">
+            <h3>Funcionalidad</h3>
+            <ul>
+                <li>Agrega un campo booleano <strong>"Precio con impuesto"</strong> en el wizard de impresión de etiquetas.</li>
+                <li>Cuando está activado, el precio mostrado en la etiqueta incluye los impuestos configurados en el producto.</li>
+                <li>Cuando está desactivado, el precio se muestra sin impuestos (comportamiento original de Odoo).</li>
+                <li>Funciona con todos los formatos de etiqueta: 2x7, 4x7, 4x12, Dymo y ZPL.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <h3>Dependencias</h3>
+            <ul>
+                <li><code>product</code></li>
+                <li><code>account</code></li>
+                <li><code>stock</code></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="oe_container oe_dark">
+        <div class="oe_row oe_spaced">
+            <h3>Instalación</h3>
+            <ol>
+                <li>Colocar el módulo en <code>extra-addons/</code>.</li>
+                <li>Actualizar la lista de aplicaciones desde el modo desarrollador.</li>
+                <li>Instalar "Etiquetas de producto con impuesto".</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <h3>Uso</h3>
+            <ol>
+                <li>Ir a un producto y seleccionar <strong>Imprimir → Etiquetas</strong>.</li>
+                <li>Elegir un formato que muestre precio (ej. <em>2 x 7 con precio</em>).</li>
+                <li>Seleccionar una lista de precios.</li>
+                <li>Activar <strong>"Precio con impuesto"</strong>.</li>
+                <li>Hacer clic en <strong>Imprimir</strong>.</li>
+            </ol>
+            <p>
+                El cálculo toma el precio de la lista de precios, le aplica los impuestos del producto
+                usando <code>compute_all()</code>, y muestra <code>total_included</code> en la etiqueta.
+            </p>
+        </div>
+    </section>
+
+    <section class="oe_container oe_dark">
+        <div class="oe_row oe_spaced">
+            <h3>Licencia</h3>
+            <p>LGPL-3</p>
+        </div>
+    </section>
+</body>
+</html>
