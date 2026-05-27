@@ -4,7 +4,7 @@
     "description": "Módulo para generar etiquetas de producto con precios que incluyen impuestos",
     "summary": "Generación de etiquetas de producto con impuesto",
     "author": "DGV",
-    # "website": "",
+    "website": "https://github.com/AlfaSystemas5457/product_label_tax",
     "license": "LGPL-3",
     "category": "inventory",
     "depends": [
